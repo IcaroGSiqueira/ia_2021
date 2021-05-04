@@ -94,10 +94,10 @@ def buscaGulosa(graph, node, search):
 				else:
 					menorDistancia = vizinhoDistancia
 					vizinhoProximo = vizinho
-		nearestNeigbhourCity = (vizinhoProximo, menorDistancia)
-		caminho.append(nearestNeigbhourCity[0])
-		nodoAtual = nearestNeigbhourCity[0]
-		distancia += nearestNeigbhourCity[1]
+		vizinhoMaisProximo = (vizinhoProximo, menorDistancia)
+		nodoAtual = vizinhoMaisProximo[0]
+		caminho.append(nodoAtual)
+		distancia += vizinhoMaisProximo[1]
 		if nodoAtual == search:
 			fim = time.time()
 			print("caminho: %s" %caminho)

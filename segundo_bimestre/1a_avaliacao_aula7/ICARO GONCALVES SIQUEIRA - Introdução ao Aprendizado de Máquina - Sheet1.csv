@@ -1,0 +1,16 @@
+Peso,Helice,Portas,Rodas,Veiculo
+200,0,0,2,Ciclomotor
+600,2,2,0,Helicoptero
+1200,0,2,4,Carro
+500,1,0,0,Lancha
+300,0,0,3,Ciclomotor
+1900,3,4,3,Helicoptero
+900,2,0,0,Lancha
+1200,2,3,3,Helicoptero
+2000,0,4,4,Carro
+800,1,1,0,Lancha
+,,,,
+250,0,0,3,Ciclomotor
+1000,2,4,0,Helicoptero
+1500,0,3,4,Carro
+1200,2,1,0,Lancha

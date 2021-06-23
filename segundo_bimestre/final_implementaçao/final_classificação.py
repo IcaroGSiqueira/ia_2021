@@ -8,7 +8,7 @@ import warnings
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 
-from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
@@ -39,15 +39,15 @@ y = arquivo['satisfaction']
 x = arquivo.drop('satisfaction', axis = 1)
 
 #Separa dados de treino de dados de teste
-x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size = 0.4)
+x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size = 0.3)
 
 
 # MODELOS #
 
-# Extra Trees Classifier #
+# Decision Tree Classifier #
 tempo1begin = time.perf_counter()
 
-modelo1 = ExtraTreesClassifier()
+modelo1 = DecisionTreeClassifier()
 print("\n", modelo1.fit(x_treino,y_treino))
 
 tempo1end = time.perf_counter()
@@ -79,6 +79,6 @@ tempo1 = tempo1end - tempo1begin
 tempo2 = tempo2end - tempo2begin
 tempo3 = tempo3end - tempo3begin
 
-print("\nAcurácia Precisão Extra: %.3f Tempo: %.2fs"%(resultado1*100, tempo1))
+print("\nAcurácia Decision Trees Classifier: %.3f Tempo: %.2fs"%(resultado1*100, tempo1))
 print("\nAcurácia Regressão Logistica: %.3f Tempo: %.2fs"%(resultado2*100, tempo2))
 print("\nAcurácia Floresta Aleatória: %.3f Tempo: %.2fs"%(resultado3*100, tempo3))
